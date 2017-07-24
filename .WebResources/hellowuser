@@ -1,0 +1,12 @@
+{
+  "apiVersion" : "4.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "http://localhost:8080",
+  "resourcePath" : "/hellowuser",
+  "apis" : [ {
+    "path" : "/hellow/",
+    "description" : "",
+    "operations" : [ ]
+  } ],
+  "models" : { }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:wsdl_1500484280537="http://www.example.org/wsdl/1500484280537" xmi:id="_Pv-TsGylEeeW2efIshGEbQ" targetNamespace="http://tns.tibco.com/bw/composite/hellowuser" name="hellowuser" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_Tqu5EGylEeeW2efIshGEbQ" name="HellowWorld" promote="ComponentHellowWorld/HellowWorld">
+    <sca:interface.wsdl xmi:id="_TriKUGylEeeW2efIshGEbQ" interface="http://www.example.org/wsdl/1500484280537#wsdl.interface(HellowWorld)" scaext:wsdlLocation="../Service%20Descriptors/HellowWorld.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_VXQsUGylEeeW2efIshGEbQ" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/24c9b330d7074aeaafdcf4870b9857b5/SOAPServiceBinding" portTypeQName="wsdl_1500484280537:HellowWorld" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.1.0">
+      <bindingType xmi:id="_VXZ2QGylEeeW2efIshGEbQ"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_bS158GylEeeW2efIshGEbQ" endpointURI="/SOAPServiceBinding/hellowWorld/" httpConnector="hellowuser.HellowWorld_HTTPConnector"/>
+      <operationConfiguration xmi:id="_VXZ2QWylEeeW2efIshGEbQ" operationName="hellouser" action="hellouser" actionNeeded="true">
+        <bindingType xmi:id="_VXZ2QmylEeeW2efIshGEbQ"/>
+        <messageConfiguration xmi:id="_VXZ2Q2ylEeeW2efIshGEbQ" messageQName="wsdl_1500484280537:hellouserRequest">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_VXZ2RGylEeeW2efIshGEbQ" partName="parameters"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_VXZ2RWylEeeW2efIshGEbQ" messageQName="wsdl_1500484280537:hellouserResponse" messageDirection="OUTPUT">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_VXZ2RmylEeeW2efIshGEbQ" partName="parameters"/>
+        </messageConfiguration>
+        <context xmi:id="_VXZ2R2ylEeeW2efIshGEbQ">
+          <inputMapping xmi:id="_VXZ2SGylEeeW2efIshGEbQ"/>
+          <outputMapping xmi:id="_VXZ2SWylEeeW2efIshGEbQ" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_VXZ2SmylEeeW2efIshGEbQ" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_P9kq0GylEeeW2efIshGEbQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_P9ub0GylEeeW2efIshGEbQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_P93lwGylEeeW2efIshGEbQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_P93lwWylEeeW2efIshGEbQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_P93lwmylEeeW2efIshGEbQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_P93lw2ylEeeW2efIshGEbQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_P-BWwGylEeeW2efIshGEbQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_P-BWwWylEeeW2efIshGEbQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_P-BWwmylEeeW2efIshGEbQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_vobTAGylEeeW2efIshGEbQ" name="/HTTP_Connection/HELLOW.HTTP.HOST" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_0NUagGylEeeW2efIshGEbQ" name="/HTTP_Connection/HELLOW.HTTP.PORT" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_P2ub8GylEeeW2efIshGEbQ" name="ComponentHellowWorld" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_P2ub8WylEeeW2efIshGEbQ" processName="hellowuser.HellowWorld"/>
+    <sca:service xmi:id="_Tp_SMGylEeeW2efIshGEbQ" name="HellowWorld">
+      <sca:interface.wsdl xmi:id="_TqSNIGylEeeW2efIshGEbQ" interface="http://www.example.org/wsdl/1500484280537#wsdl.interface(HellowWorld)" scaext:wsdlLocation="../Service%20Descriptors/HellowWorld.wsdl"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_G5GtwGyyEeeW2efIshGEbQ" name="ComponenthellowuserConsumer" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_G5GtwWyyEeeW2efIshGEbQ" processName="hellowuser.hellowuserConsumer"/>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:tp="http://xsd.tns.tibco.com/bw/models/sharedresource/threadpool" xmi:id="_7h8KoW5FEeeW2efIshGEbQ" name="hellowuser.HttpClientResource" type="http:HttpClientConfiguration">
+  <jndi:reference xmi:id="_EPTjYG5GEeeW2efIshGEbQ" key="threadPoolConfigurationName" type="tp:ThreadPoolConfiguration" value="hellowuser.ThreadPoolResource"/>
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_7kAAIG5FEeeW2efIshGEbQ" httpClientVersion="commons" retryCount="3">
+    <tcpDetails xmi:id="_7kJKEG5FEeeW2efIshGEbQ" connectionTimeout="3000"/>
+  </jndi:configuration>
+</jndi:namedResource>

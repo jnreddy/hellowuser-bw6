@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://www.example.org/schema/1500484280575" xmlns:extns1="http://tns.tibco.com/bw/REST" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://www.example.org/schema/1500484280575/REST/1500492016449" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="hellowuser" targetNamespace="http://www.example.org/schema/1500484280575/REST/1500492016449">
+  <wsdl:import namespace="http://www.example.org/schema/1500484280575"/>
+  <wsdl:import namespace="http://tns.tibco.com/bw/REST"/>
+  <wsdl:message name="getRequest">
+    <wsdl:part element="extns1:httpHeaders" name="httpHeaders" tibex:source="bw.rest"/>
+  </wsdl:message>
+  <wsdl:message name="getResponse">
+    <wsdl:part element="extns:hellouserRequest" name="item"/>
+  </wsdl:message>
+  <wsdl:message name="get4XXFaultMessage">
+    <wsdl:part element="extns1:client4XXError" name="clientError"/>
+  </wsdl:message>
+  <wsdl:message name="get5XXFaultMessage">
+    <wsdl:part element="extns1:server5XXError" name="serverError"/>
+  </wsdl:message>
+  <wsdl:portType name="Hellow" tibex:source="bw.rest">
+    <wsdl:documentation>Summary about the new REST service.</wsdl:documentation>
+  </wsdl:portType>
+</wsdl:definitions>

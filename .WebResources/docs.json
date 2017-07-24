@@ -1,0 +1,9 @@
+{
+  "apiVersion" : "4.0",
+  "swaggerVersion" : "1.2",
+  "basePath" : "http://localhost:7777/hellowuser",
+  "apis" : [ {
+    "path" : "/hellowuser",
+    "description" : "Summary about the new REST service."
+  } ]
+}

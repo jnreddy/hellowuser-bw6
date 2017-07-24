@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://www.example.org/schema/1500484280575" xmlns:tns="http://www.example.org/wsdl/1500484280537" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HellowWorld" targetNamespace="http://www.example.org/wsdl/1500484280537">
+  <wsdl:import namespace="http://www.example.org/schema/1500484280575"/>
+  <wsdl:message name="hellouserRequest">
+    <wsdl:part element="extns:hellouserRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="hellouserResponse">
+    <wsdl:part element="extns:hellouserResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="HellowWorld">
+    <wsdl:operation name="hellouser">
+      <wsdl:input message="tns:hellouserRequest" name="hellouserInput"/>
+      <wsdl:output message="tns:hellouserResponse" name="hellouserOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
